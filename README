@@ -1,0 +1,18 @@
+This is a mirror of http://www.vim.org/scripts/script.php?script_id=19
+
+Use this script when you have a www page with the list of downloadable 
+links and want to download all/some of them using GetRight.
+
+The script assumes that you have a file, each line of which containing a link(s)
+to file you want to download. Such file may be produced, for examle, if You open 
+some html file and issue a command : 
+
+:gl /href=".*zip"/ . write! >> files.grx
+:e files.grx
+
+When loaded, the script loads and maps following functions :
+1. UnHref() - which removes everything except URLs themselves, and puts every URL on a single line
+2. Ability to set the destination directory
+3. MakeList() - Function that converts pure URLs to GetRight acceptable information - before invoking it,
+each line should contain pure single URL.
+
